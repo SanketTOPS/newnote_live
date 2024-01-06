@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tooplate's Little Fashion - Contact Page</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/slick.css" />
+
+    <link href="/static/css/tooplate-little-fashion.css" rel="stylesheet">
+
+    <!--
+
+Tooplate 2127 Little Fashion
+
+https://www.tooplate.com/view/2127-little-fashion
+
+-->
+</head>
+
+<body>
+
+    <section class="preloader">
+        <div class="spinner">
+            <span class="sk-inner-circle"></span>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand" href="#">NotesApp</a> -->
+                <a class="navbar-brand" href="#">
+                    <img src="/static/imgs/logo.png" alt="Logo" width="32" height="28"
+                        class="d-inline-block align-text-top">
+                    NotesApp
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/notes">Notes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <button class="btn btn-outline-warning mx-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-outline-danger" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Signup</button>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <header class="site-header section-padding-img site-header-image">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-10 col-12 header-info">
+                        <h1>
+                            <span class="d-block text-primary">Say hello to us</span>
+                            <span class="d-block text-dark">love to hear you</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <img src="/static/images/header/positive-european-woman-has-break-after-work.jpg"
+                class="header-image img-fluid" alt="">
+        </header>
+
+        <section class="contact section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <h2 class="mb-4">Let's <span>begin</span></h2>
+
+                        <form method="post" class="contact-form me-lg-5 pe-lg-3" role="form">
+                            {% csrf_token %}
+
+                            <div class="form-floating">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Full name"
+                                    required>
+
+                                <label for="name">Full name</label>
+                            </div>
+
+                            <div class="form-floating my-4">
+                                <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
+                                    placeholder="Email address" required>
+
+                                <label for="email">Email address</label>
+                            </div>
+
+                            <div class="form-floating my-4">
+                                <input type="number" name="mob" class="form-control"
+                                    placeholder="Email address" required>
+
+                                <label for="mobile">Mobile</label>
+                            </div>
+                            <div class="form-floating my-4">
+                                <input type="subject" name="sub" id="subject" class="form-control"
+                                    placeholder="Subject" required>
+
+                                <label for="subject">Subject</label>
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <textarea id="message" name="msg" class="form-control"
+                                    placeholder="Leave a comment here" required style="height: 160px"></textarea>
+
+                                <label for="message">Tell us about the project</label>
+                            </div>
+
+                            <div class="col-lg-5 col-6">
+                                <button type="submit" class="form-control">Send</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mt-5 ms-auto">
+                        <iframe width="520" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                            id="gmap_canvas"
+                            src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=1st%20Floor,%20Aditya%20Complex,%20Jalaram%202%20Street%20Number%202%20Rajkot+(TOPS%20Technologies%20Pvt%20Ltd)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        <a href='https://www.easybooking.eu/produkte/julia-hotelsoftware'>Hotelsoftware Julia</a>
+                        <script type='text/javascript'
+                            src='https://embedmaps.com/google-maps-authorization/script.js?id=5b5010266814622e4f28c1f36fcd622e80853688'></script>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h4 class="text-white mb-3"><a href="index.html">Little</a> Fashion</h4>
+                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2022 <strong>Little
+                            Fashion</strong></p>
+                    <br>
+                    <p class="copyright-text">Designed by <a href="https://www.tooplate.com/"
+                            target="_blank">Tooplate</a></p>
+                </div>
+
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">Sitemap</h5>
+
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Products</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Privacy policy</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQs</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-4">
+                    <h5 class="text-white mb-3">Social</h5>
+
+                    <ul class="social-icon">
+
+                        <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+
+                        <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+
+                        <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                        <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/Headroom.js"></script>
+    <script src="/static/js/jQuery.headroom.js"></script>
+    <script src="/static/js/slick.min.js"></script>
+    <script src="/static/js/custom.js"></script>
+
+    <!-- WhatsApp Chat Start -->
+    <script>
+        var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?54744';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = url;
+        var options = {
+            "enabled": true,
+            "chatButtonSetting": {
+                "backgroundColor": "#00e785",
+                "ctaText": "Connect with us",
+                "borderRadius": "25",
+                "marginLeft": "0",
+                "marginRight": "20",
+                "marginBottom": "20",
+                "ctaIconWATI": false,
+                "position": "right"
+            },
+            "brandSetting": {
+                "brandName": "NotesApp",
+                "brandSubTitle": "Explorer your idea!",
+                "brandImg": "/static/imgs/favicon.png",
+                "welcomeText": "Hi there!\nHow can I help you?",
+                "messageText": "Hello, %0A I have a question about {{page_link}}",
+                "backgroundColor": "#00e785",
+                "ctaText": "Connect with us",
+                "borderRadius": "25",
+                "autoShow": false,
+                "phoneNumber": "919724799469"
+            }
+        };
+        s.onload = function () {
+            CreateWhatsappChatWidget(options);
+        };
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    </script>
+    <!-- WhatsApp Chat End -->
+</body>
+
+</html>
